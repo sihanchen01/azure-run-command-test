@@ -81,7 +81,8 @@ ERROR_FILE="${run_command_name}-stderr-${TIMESTAMP}.txt"
 storage_account_key=$(az storage account keys list \
     --resource-group ${storage_account_resource_group} \
     --account-name ${storage_account} \
-    --query '[0].value')
+    --query '[0].value' \
+    --output tsv)
 
 # 1. get SAS token for the storage account
 end=`date -u -d "30 minutes" '+%Y-%m-%dT%H:%MZ'`
@@ -93,7 +94,8 @@ output_sas=$(az storage blob generate-sas \
     -n ${OUTPUT_FILE} \
     --permissions rw \
     --expiry $end \
-    --https-only)
+    --https-only \
+    --output tsv)
 
 error_sas=$(az storage blob generate-sas \
     --account-name ${storage_account} \
@@ -102,7 +104,8 @@ error_sas=$(az storage blob generate-sas \
     -n ${ERROR_FILE} \
     --permissions rw \
     --expiry $end \
-    --https-only)
+    --https-only \
+    --output tsv)
 
 # 2. create vm run command
 
@@ -111,8 +114,8 @@ az vm run-command create --run-command-name "${run_command_name}" \
     --resource-group "${vm_resource_group}" \
     --vm-name "${vm_name}" \
     --script "bash ${script_name} | tee ${logfolder}/${run_command_name}-${TIMESTAMP}.log" \
-    --output-blob-uri "${BLOB_URI_BASE}/${OUTPUT_FILE}/${output_sas}" \
-    --error-blob-uri "${BLOB_URI_BASE}/${ERROR_FILE}/${error_sas}" \
+    --output-blob-uri "${BLOB_URI_BASE}/${OUTPUT_FILE}?${output_sas}" \
+    --error-blob-uri "${BLOB_URI_BASE}/${ERROR_FILE}?${error_sas}" \
     --run-as-user "$username"
 
 # 3. az vm run-command show to get the output and error
