@@ -1,0 +1,36 @@
+{
+  "asyncExecution": true,
+  "errorBlobManagedIdentity": null,
+  "errorBlobUri": "https://sihansatest.blob.core.windows.net/run-command-test/my-rc-errout-3.txt",
+  "id": "/subscriptions/916285b1-819c-47fb-b998-ea610835d45f/resourceGroups/testvm_group/providers/Microsoft.Compute/virtualMachines/testvm/runCommands/MyRunCommand3",
+  "instanceView": {
+    "endTime": "2025-07-05T14:19:57+00:00",
+    "error": "+ whoami\n+ cat nothere.txt\ncat: nothere.txt: Permission denied\n+ hostname\n+ lsblk\n",
+    "executionMessage": "Execution completed",
+    "executionState": "Succeeded",
+    "exitCode": 0,
+    "output": "azureuser\ntestvm\nNAME              MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS\nsda                 8:0    0   64G  0 disk \n├─sda1              8:1    0  500M  0 part /boot/efi\n├─sda2              8:2    0    1G  0 part /boot\n├─sda3              8:3    0    2M  0 part \n└─sda4              8:4    0 62.5G  0 part \n  ├─rootvg-homelv 253:0    0    1G  0 lvm  /home\n  ├─rootvg-rootlv 253:1    0    2G  0 lvm  /\n  ├─rootvg-tmplv  253:2    0    2G  0 lvm  /tmp\n  ├─rootvg-usrlv  253:3    0   10G  0 lvm  /usr\n  └─rootvg-varlv  253:4    0   10G  0 lvm  /var\nsdb                 8:16   0    4G  0 disk \n└─sdb1              8:17   0    4G  0 part /mnt\nsr0                11:0    1  628K  0 rom  \n",
+    "startTime": "2025-07-05T14:19:57+00:00",
+    "statuses": null
+  },
+  "location": "southeastasia",
+  "name": "MyRunCommand3",
+  "outputBlobManagedIdentity": null,
+  "outputBlobUri": "https://sihansatest.blob.core.windows.net/run-command-test/my-rc-stdout-3.txt",
+  "parameters": null,
+  "protectedParameters": null,
+  "provisioningState": "Succeeded",
+  "resourceGroup": "testvm_group",
+  "runAsPassword": null,
+  "runAsUser": "azureuser",
+  "source": {
+    "commandId": null,
+    "script": "bash /home/azureuser/test3.sh | tee /home/azureuser/log/test-$(date +%Y%m%d-%H%M%S).log",
+    "scriptUri": null,
+    "scriptUriManagedIdentity": null
+  },
+  "tags": null,
+  "timeoutInSeconds": 0,
+  "treatFailureAsDeploymentFailure": null,
+  "type": "Microsoft.Compute/virtualMachines/runCommands"
+}
