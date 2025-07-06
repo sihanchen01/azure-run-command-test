@@ -1,0 +1,21 @@
+================ [Test: Missing Required Arguments] ================
+[2025-07-06 12:33:31] INFO: ⭐ Starting Run Command Creation Pipeline...
+Missing required arguments: --vm-name/-v --run-as-user/-u
+Usage: ./start.sh [OPTIONS]
+Options:
+  --vm-resource-group, -r <resource_group>       Resource group of the VM (required)
+  --vm-name, -v <vm_name>                        Name of the VM (required)
+  --run-command-name, -n <run_command_name>      Name for the run command (required)
+  --log-folder, -l <log_folder>                  Folder to store logs (required)
+  --script-name, -s <script_name>                Name of the script to run (required)
+  --storage-account, -a <storage_account>        Storage account name (required)
+  --storage-account-resource-group, -g <rg>      Resource group of the storage account (required)
+  --container, -c <container_name>               Blob container name (required)
+  --run-as-user, -u <username>                   User to run the command as (required)
+  --timeout, -t <seconds>                        Command timeout in seconds (default: 3600)
+  --sas-expiry, -e <minutes>                     SAS token expiry in minutes (default: 60)
+  --verbose, -V                                  Enable verbose output (debug mode)
+  --no-wait                                      Don't wait for command completion
+  --help, -h                                     Show this help message
+
+

@@ -1,0 +1,6 @@
+================ [Test: Invalid SAS Token] ================
+[2025-07-06 12:33:28] INFO: ⭐ Starting Run Command Creation Pipeline...
+[2025-07-06 12:33:28] ERROR: ❌ SAS expiry time must be greater or equal to command timeout!
+[2025-07-06 12:33:28] ERROR: ❌ Current SAS expiry: 20 minutes, Command timeout: 1800 seconds
+
+

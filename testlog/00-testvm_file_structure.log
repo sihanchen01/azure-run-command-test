@@ -1,0 +1,61 @@
+Every 2.0s: tree                                                                                                                                                                                                                              testvm: Sun Jul  6 11:43:44 2025
+.
+├── log
+│   ├── MyRunCommand3-20250706-012549.log
+│   ├── MyRunCommand3-20250706-102323.log
+│   ├── MyRunCommand3-20250706-102642.log
+│   ├── MyRunCommand3-20250706-103408.log
+│   ├── MyRunCommand4-20250706-105129.log
+│   ├── MyRunCommand4-20250706-105546.log
+│   ├── MyRunCommand4-20250706-105945.log
+│   ├── MyRunCommand4-20250706-112248.log
+│   ├── MyRunCommand4-20250706-112743.log
+│   ├── NoWaitTest-20250706-113148.log
+│   ├── NoWaitTest-20250706-113550.log
+│   ├── NoWaitTest-20250706-113800.log
+│   ├── NoWaitTest-20250706-114003.log
+│   ├── NoWaitTest-20250706-114214.log
+│   ├── QuickCommand-20250706-105304.log
+│   ├── QuickCommand-20250706-110744.log
+│   ├── QuickCommand-20250706-110909.log
+│   ├── QuickCommand-20250706-112424.log
+│   ├── QuickCommand-20250706-112659.log
+│   ├── VerboseTest-20250706-113231.log
+│   ├── VerboseTest-20250706-113633.log
+│   ├── VerboseTest-20250706-114049.log
+│   ├── VerboseTest-20250706-114256.log
+│   ├── test-20250702-130705.log
+│   ├── test-20250705-133324.log
+│   ├── test-20250705-141155.log
+│   └── test-20250705-221957.log
+├── test.sh
+├── test2.sh
+├── test3.sh
+└── waagent
+    └── run-command-handler-runas
+        └── download
+            ├── MyRunCommand
+            │   └── 1
+            │       └── script.sh
+            ├── MyRunCommand2
+            │   └── 0
+            │       └── script.sh
+            ├── MyRunCommand3
+            │   └── 8
+            │       └── script.sh
+            ├── MyRunCommand4
+            │   └── 4
+            │       └── script.sh
+            ├── NoWaitTest
+            │   ├── 3
+            │   │   └── script.sh
+            │   └── 4
+            │       └── script.sh
+            ├── QuickCommand
+            │   └── 4
+            │       └── script.sh
+            └── VerboseTest
+                └── 3
+                    └── script.sh
+
+20 directories, 38 files
