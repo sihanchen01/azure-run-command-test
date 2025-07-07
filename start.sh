@@ -131,6 +131,7 @@ wait_for_completion() {
 			return 0
 		elif [[ "$status" == "Failed" ]]; then
 			log_error "Command failed"
+			jq -r ".instanceView.error" <"$RC_STATUS"
 			return 1
 		elif [[ "$status" == "Running" ]]; then
 			log_info "=================[Get Running Output, Attempt-$attempt]================="

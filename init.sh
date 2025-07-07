@@ -64,8 +64,7 @@ test_invalid_log_foler() {
         --container "run-command-test" \
         --run-as-user "azureuser" \
         --timeout 1800 \
-        --sas-expiry 30 \
-        --no-wait
+        --sas-expiry 30
     echo
     echo
 }
@@ -136,15 +135,9 @@ test_wait_for_completion() {
 echo "Running tests..."
 
 # test_invalid_sas 2>&1 | tee testlog/01-test_invalid_sas.log
-# 
 # test_invalid_storage_account 2>&1 | tee testlog/02-test_invalid_storage_account.log 
-# 
 # test_missing_required_args 2>&1 | tee testlog/03-test_missing_required_args.log
-# 
-# test_invalid_log_foler 2>&1 | tee testlog/04-test_invalid_log_folder.log
-# 
+test_invalid_log_foler 2>&1 | tee testlog/04-test_invalid_log_folder.log
 # test_no_wait 2>&1 | tee testlog/04-test_no_wait.log
-# 
 # test_verbose 2>&1 | tee testlog/05-test_verbose.log
-
-test_wait_for_completion 2>&1 | tee testlog/06-test_wait_for_completion.log
+# test_wait_for_completion 2>&1 | tee testlog/06-test_wait_for_completion.log
