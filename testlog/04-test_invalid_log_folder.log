@@ -1,0 +1,44 @@
+================ [Test: Wait for Completion] ================
+[2025-07-07 21:02:20] INFO: ⭐ Starting Run Command Creation Pipeline...
+[2025-07-07 21:02:20] INFO: Checking Azure CLI authentication...
+[2025-07-07 21:02:21] INFO: Using subscription: 916285b1-819c-47fb-b998-ea610835d45f
+[2025-07-07 21:02:21] INFO: Validating VM exists...
+[2025-07-07 21:02:22] INFO: Validating storage account exists...
+[2025-07-07 21:02:23] INFO: Validating container exists...
+[2025-07-07 21:02:25] INFO: Retrieving storage account key...
+[2025-07-07 21:02:26] INFO: Generated SAS token expiry: 2025-07-07T13:12Z
+[2025-07-07 21:02:26] INFO: Generating SAS token for output file...
+[2025-07-07 21:02:27] INFO: Generating SAS token for error file...
+[2025-07-07 21:02:28] INFO: Creating VM run command...
+[2025-07-07 21:03:00] SUCCESS: ✅ VM run command 'WaitForComplete' created successfully
+[2025-07-07 21:03:00] INFO: Waiting for command completion (timeout: 600s)...
+[2025-07-07 21:03:02] INFO: =================[Get Running Output, Attempt-1]=================
+[2025-07-07 21:03:02] INFO: (Attempt-1) Current status: Failed
+[2025-07-07 21:03:02] ERROR: ❌ Command failed
+tee: /home/azureuser/doesnotexist/WaitForComplete-20250707-210225.log: No such file or directory
++ for i in {1..10}
++ echo 'from /home/azureuser/test2.sh, message 1'
++ for i in {1..10}
++ echo 'from /home/azureuser/test2.sh, message 2'
++ for i in {1..10}
++ echo 'from /home/azureuser/test2.sh, message 3'
++ for i in {1..10}
++ echo 'from /home/azureuser/test2.sh, message 4'
++ for i in {1..10}
++ echo 'from /home/azureuser/test2.sh, message 5'
++ for i in {1..10}
++ echo 'from /home/azureuser/test2.sh, message 6'
++ for i in {1..10}
++ echo 'from /home/azureuser/test2.sh, message 7'
++ for i in {1..10}
++ echo 'from /home/azureuser/test2.sh, message 8'
++ for i in {1..10}
++ echo 'from /home/azureuser/test2.sh, message 9'
++ for i in {1..10}
++ echo 'from /home/azureuser/test2.sh, message 10'
+
+[2025-07-07 21:03:02] ERROR: ❌ Command execution failed or timed out!
+[2025-07-07 21:03:02] INFO: Retrieving command results...
+[2025-07-07 21:03:03] ERROR: ❌ Command execution failed with exit code: 1
+
+

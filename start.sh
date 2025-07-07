@@ -134,6 +134,7 @@ wait_for_completion() {
 			return 0
 		elif [[ "$status" == "Failed" ]]; then
 			log_error "Command failed"
+			cat "$TEMP_OUTPUT" | jq -r ".instanceView.error"
 			return 1
 		elif [[ "$status" == "Running" ]]; then
 			log_info "Command is still running... (${elapsed}s elapsed)"

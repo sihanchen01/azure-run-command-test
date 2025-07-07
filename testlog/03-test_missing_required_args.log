@@ -1,5 +1,5 @@
 ================ [Test: Missing Required Arguments] ================
-[2025-07-06 12:33:31] INFO: ⭐ Starting Run Command Creation Pipeline...
+[2025-07-07 21:02:20] INFO: ⭐ Starting Run Command Creation Pipeline...
 Missing required arguments: --vm-name/-v --run-as-user/-u
 Usage: ./start.sh [OPTIONS]
 Options:

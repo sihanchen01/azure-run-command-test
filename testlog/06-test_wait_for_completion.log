@@ -1,116 +1,72 @@
 ================ [Test: Wait for Completion] ================
-[2025-07-06 12:36:45] INFO: ⭐ Starting Run Command Creation Pipeline...
-[2025-07-06 12:36:45] INFO: Checking Azure CLI authentication...
-[2025-07-06 12:36:46] INFO: Using subscription: 916285b1-819c-47fb-b998-ea610835d45f
-[2025-07-06 12:36:46] INFO: Validating VM exists...
-[2025-07-06 12:36:48] INFO: Validating storage account exists...
-[2025-07-06 12:36:49] INFO: Validating container exists...
-[2025-07-06 12:36:50] INFO: Retrieving storage account key...
-[2025-07-06 12:36:54] INFO: Generated SAS token expiry: 2025-07-06T04:46Z
-[2025-07-06 12:36:54] INFO: Generating SAS token for output file...
-[2025-07-06 12:36:55] INFO: Generating SAS token for error file...
-[2025-07-06 12:36:56] INFO: Creating VM run command...
-[2025-07-06 12:37:31] SUCCESS: ✅ VM run command 'WaitForComplete' created successfully
-[2025-07-06 12:37:31] INFO: Waiting for command completion (timeout: 600s)...
-[2025-07-06 12:37:32] INFO: =================[Get Running Output, Attempt-1]=================
-[2025-07-06 12:37:32] INFO: (Attempt-1) Current status: Running
-[2025-07-06 12:37:32] INFO: Command is still running... (0s elapsed)
-[2025-07-06 12:37:32] INFO: [Current Output]
-
-[2025-07-06 12:37:32] INFO: [End of Current Output]
-[2025-07-06 12:37:32] INFO: (Attempt-1) 🕜 Waiting for 10s before next check...
-[2025-07-06 12:37:43] INFO: =================[Get Running Output, Attempt-2]=================
-[2025-07-06 12:37:43] INFO: (Attempt-2) Current status: Running
-[2025-07-06 12:37:43] INFO: Command is still running... (10s elapsed)
-[2025-07-06 12:37:43] INFO: [Current Output]
-
-[2025-07-06 12:37:43] INFO: [End of Current Output]
-[2025-07-06 12:37:43] INFO: (Attempt-2) 🕜 Waiting for 10s before next check...
-[2025-07-06 12:37:54] INFO: =================[Get Running Output, Attempt-3]=================
-[2025-07-06 12:37:54] INFO: (Attempt-3) Current status: Succeeded
-[2025-07-06 12:37:54] SUCCESS: ✅ Command completed successfully
-[2025-07-06 12:37:54] SUCCESS: ✅ Command execution completed!
-[2025-07-06 12:37:54] INFO: Retrieving command results...
-[2025-07-06 12:37:55] SUCCESS: ✅ Command executed successfully
+[2025-07-07 21:04:26] INFO: ⭐ Starting Run Command Creation Pipeline...
+[2025-07-07 21:04:26] INFO: Checking Azure CLI authentication...
+[2025-07-07 21:04:27] INFO: Using subscription: 916285b1-819c-47fb-b998-ea610835d45f
+[2025-07-07 21:04:27] INFO: Validating VM exists...
+[2025-07-07 21:04:28] INFO: Validating storage account exists...
+[2025-07-07 21:04:29] INFO: Validating container exists...
+[2025-07-07 21:04:31] INFO: Retrieving storage account key...
+[2025-07-07 21:04:32] INFO: Generated SAS token expiry: 2025-07-07T13:14Z
+[2025-07-07 21:04:32] INFO: Generating SAS token for output file...
+[2025-07-07 21:04:33] INFO: Generating SAS token for error file...
+[2025-07-07 21:04:34] INFO: Creating VM run command...
+[2025-07-07 21:05:06] SUCCESS: ✅ VM run command 'WaitForComplete' created successfully
+[2025-07-07 21:05:06] INFO: Waiting for command completion (timeout: 600s)...
+[2025-07-07 21:05:07] INFO: =================[Get Running Output, Attempt-1]=================
+[2025-07-07 21:05:07] INFO: (Attempt-1) Current status: Succeeded
+[2025-07-07 21:05:07] SUCCESS: ✅ Command completed successfully
+[2025-07-07 21:05:07] SUCCESS: ✅ Command execution completed!
+[2025-07-07 21:05:07] INFO: Retrieving command results...
+[2025-07-07 21:05:09] SUCCESS: ✅ Command executed successfully
 
 ==================[EXECUTION INFO]===================
 Execution State: Succeeded
 Exit Code: 0
-Start Time: 2025-07-06T04:37:17+00:00
-End Time: 2025-07-06T04:37:47+00:00
-Output Blob: https://sihansatest.blob.core.windows.net/run-command-test/WaitForComplete-stdout-20250706-123650.txt
-Error Blob: https://sihansatest.blob.core.windows.net/run-command-test/WaitForComplete-stderr-20250706-123650.txt
+Start Time: 2025-07-07T13:04:40+00:00
+End Time: 2025-07-07T13:04:40+00:00
+Output Blob: https://sihansatest.blob.core.windows.net/run-command-test/WaitForComplete-stdout-20250707-210431.txt
+Error Blob: https://sihansatest.blob.core.windows.net/run-command-test/WaitForComplete-stderr-20250707-210431.txt
 ===============[END OF EXECUTION INFO]===============
 
 ==================[STDOUT]===================
-1 from test2
-
-2 from test2
-
-3 from test2
-
-4 from test2
-
-5 from test2
-
-6 from test2
-
-7 from test2
-
-8 from test2
-
-9 from test2
-
-10 from test2
-
+from /home/azureuser/test2.sh, message 1
+from /home/azureuser/test2.sh, message 2
+from /home/azureuser/test2.sh, message 3
+from /home/azureuser/test2.sh, message 4
+from /home/azureuser/test2.sh, message 5
+from /home/azureuser/test2.sh, message 6
+from /home/azureuser/test2.sh, message 7
+from /home/azureuser/test2.sh, message 8
+from /home/azureuser/test2.sh, message 9
+from /home/azureuser/test2.sh, message 10
 
 
 ===============[END OF STDOUT]===============
 
 ==================[STDERR]===================
 + for i in {1..10}
-+ echo '1 from test2'
-+ echo
-+ sleep 3
++ echo 'from /home/azureuser/test2.sh, message 1'
 + for i in {1..10}
-+ echo '2 from test2'
-+ echo
-+ sleep 3
++ echo 'from /home/azureuser/test2.sh, message 2'
 + for i in {1..10}
-+ echo '3 from test2'
-+ echo
-+ sleep 3
++ echo 'from /home/azureuser/test2.sh, message 3'
 + for i in {1..10}
-+ echo '4 from test2'
-+ echo
-+ sleep 3
++ echo 'from /home/azureuser/test2.sh, message 4'
 + for i in {1..10}
-+ echo '5 from test2'
-+ echo
-+ sleep 3
++ echo 'from /home/azureuser/test2.sh, message 5'
 + for i in {1..10}
-+ echo '6 from test2'
-+ echo
-+ sleep 3
++ echo 'from /home/azureuser/test2.sh, message 6'
 + for i in {1..10}
-+ echo '7 from test2'
-+ echo
-+ sleep 3
++ echo 'from /home/azureuser/test2.sh, message 7'
 + for i in {1..10}
-+ echo '8 from test2'
-+ echo
-+ sleep 3
++ echo 'from /home/azureuser/test2.sh, message 8'
 + for i in {1..10}
-+ echo '9 from test2'
-+ echo
-+ sleep 3
++ echo 'from /home/azureuser/test2.sh, message 9'
 + for i in {1..10}
-+ echo '10 from test2'
-+ echo
-+ sleep 3
++ echo 'from /home/azureuser/test2.sh, message 10'
 
 
 ===============[END OF STDERR]===============
-[2025-07-06 12:37:56] SUCCESS: ✅ VM run command 'WaitForComplete' output retrieved successfully
+[2025-07-07 21:05:09] SUCCESS: ✅ VM run command 'WaitForComplete' output retrieved successfully
 
 
