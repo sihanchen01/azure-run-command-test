@@ -1,116 +1,492 @@
 ================ [Test: Wait for Completion] ================
-[2025-07-06 12:36:45] INFO: ⭐ Starting Run Command Creation Pipeline...
-[2025-07-06 12:36:45] INFO: Checking Azure CLI authentication...
-[2025-07-06 12:36:46] INFO: Using subscription: 916285b1-819c-47fb-b998-ea610835d45f
-[2025-07-06 12:36:46] INFO: Validating VM exists...
-[2025-07-06 12:36:48] INFO: Validating storage account exists...
-[2025-07-06 12:36:49] INFO: Validating container exists...
-[2025-07-06 12:36:50] INFO: Retrieving storage account key...
-[2025-07-06 12:36:54] INFO: Generated SAS token expiry: 2025-07-06T04:46Z
-[2025-07-06 12:36:54] INFO: Generating SAS token for output file...
-[2025-07-06 12:36:55] INFO: Generating SAS token for error file...
-[2025-07-06 12:36:56] INFO: Creating VM run command...
-[2025-07-06 12:37:31] SUCCESS: ✅ VM run command 'WaitForComplete' created successfully
-[2025-07-06 12:37:31] INFO: Waiting for command completion (timeout: 600s)...
-[2025-07-06 12:37:32] INFO: =================[Get Running Output, Attempt-1]=================
-[2025-07-06 12:37:32] INFO: (Attempt-1) Current status: Running
-[2025-07-06 12:37:32] INFO: Command is still running... (0s elapsed)
-[2025-07-06 12:37:32] INFO: [Current Output]
-
-[2025-07-06 12:37:32] INFO: [End of Current Output]
-[2025-07-06 12:37:32] INFO: (Attempt-1) 🕜 Waiting for 10s before next check...
-[2025-07-06 12:37:43] INFO: =================[Get Running Output, Attempt-2]=================
-[2025-07-06 12:37:43] INFO: (Attempt-2) Current status: Running
-[2025-07-06 12:37:43] INFO: Command is still running... (10s elapsed)
-[2025-07-06 12:37:43] INFO: [Current Output]
-
-[2025-07-06 12:37:43] INFO: [End of Current Output]
-[2025-07-06 12:37:43] INFO: (Attempt-2) 🕜 Waiting for 10s before next check...
-[2025-07-06 12:37:54] INFO: =================[Get Running Output, Attempt-3]=================
-[2025-07-06 12:37:54] INFO: (Attempt-3) Current status: Succeeded
-[2025-07-06 12:37:54] SUCCESS: ✅ Command completed successfully
-[2025-07-06 12:37:54] SUCCESS: ✅ Command execution completed!
-[2025-07-06 12:37:54] INFO: Retrieving command results...
-[2025-07-06 12:37:55] SUCCESS: ✅ Command executed successfully
+[2025-07-07 21:30:42] INFO: ⭐ Starting Run Command Creation Pipeline...
+[2025-07-07 21:30:42] INFO: Checking Azure CLI authentication...
+[2025-07-07 21:30:44] INFO: Using subscription: 916285b1-819c-47fb-b998-ea610835d45f
+[2025-07-07 21:30:44] INFO: Validating VM exists...
+[2025-07-07 21:30:45] INFO: Validating storage account exists...
+[2025-07-07 21:30:46] INFO: Validating container exists...
+[2025-07-07 21:30:48] INFO: Retrieving storage account key...
+[2025-07-07 21:30:49] INFO: Generated SAS token expiry: 2025-07-07T13:40Z
+[2025-07-07 21:30:49] INFO: Generating SAS token for output file...
+[2025-07-07 21:30:50] INFO: Generating SAS token for error file...
+[2025-07-07 21:30:51] INFO: Creating VM run command...
+[2025-07-07 21:31:23] SUCCESS: ✅ VM run command 'WaitForComplete' created successfully
+[2025-07-07 21:31:23] INFO: Waiting for command completion (timeout: 600s)...
+[2025-07-07 21:31:25] INFO: (Check-1) Current status: Running
+[2025-07-07 21:31:25] INFO: =================[Get Running Output, Attempt-1]=================
+[2025-07-07 21:31:25] INFO: Command is still running... (0s elapsed)
+[2025-07-07 21:31:25] INFO: [NEW OUTPUT LINES]: 1
+     1	
+[2025-07-07 21:31:25] INFO: (Check-1) 🕜 Waiting for 10s before next check...
+[2025-07-07 21:31:36] INFO: (Check-2) Current status: Running
+[2025-07-07 21:31:36] INFO: =================[Get Running Output, Attempt-2]=================
+[2025-07-07 21:31:36] INFO: Command is still running... (10s elapsed)
+[2025-07-07 21:31:36] INFO: [NEW OUTPUT LINES]: 10
+     2	from /home/azureuser/test2.sh, message 2
+     3	from /home/azureuser/test2.sh, message 3
+     4	from /home/azureuser/test2.sh, message 4
+     5	from /home/azureuser/test2.sh, message 5
+     6	from /home/azureuser/test2.sh, message 6
+     7	from /home/azureuser/test2.sh, message 7
+     8	from /home/azureuser/test2.sh, message 8
+     9	from /home/azureuser/test2.sh, message 9
+    10	from /home/azureuser/test2.sh, message 10
+    11	
+[2025-07-07 21:31:36] INFO: (Check-2) 🕜 Waiting for 10s before next check...
+[2025-07-07 21:31:47] INFO: (Check-3) Current status: Running
+[2025-07-07 21:31:47] INFO: =================[Get Running Output, Attempt-3]=================
+[2025-07-07 21:31:47] INFO: Command is still running... (20s elapsed)
+[2025-07-07 21:31:47] INFO: (Check-3) 🕜 Waiting for 10s before next check...
+[2025-07-07 21:31:58] INFO: (Check-4) Current status: Running
+[2025-07-07 21:31:58] INFO: =================[Get Running Output, Attempt-4]=================
+[2025-07-07 21:31:58] INFO: Command is still running... (30s elapsed)
+[2025-07-07 21:31:59] INFO: (Check-4) 🕜 Waiting for 10s before next check...
+[2025-07-07 21:32:10] INFO: (Check-5) Current status: Running
+[2025-07-07 21:32:10] INFO: =================[Get Running Output, Attempt-5]=================
+[2025-07-07 21:32:10] INFO: Command is still running... (40s elapsed)
+[2025-07-07 21:32:10] INFO: [NEW OUTPUT LINES]: 10
+    12	from /home/azureuser/test2.sh, message 12
+    13	from /home/azureuser/test2.sh, message 13
+    14	from /home/azureuser/test2.sh, message 14
+    15	from /home/azureuser/test2.sh, message 15
+    16	from /home/azureuser/test2.sh, message 16
+    17	from /home/azureuser/test2.sh, message 17
+    18	from /home/azureuser/test2.sh, message 18
+    19	from /home/azureuser/test2.sh, message 19
+    20	from /home/azureuser/test2.sh, message 20
+    21	
+[2025-07-07 21:32:10] INFO: (Check-5) 🕜 Waiting for 10s before next check...
+[2025-07-07 21:32:21] INFO: (Check-6) Current status: Running
+[2025-07-07 21:32:21] INFO: =================[Get Running Output, Attempt-6]=================
+[2025-07-07 21:32:21] INFO: Command is still running... (50s elapsed)
+[2025-07-07 21:32:21] INFO: (Check-6) 🕜 Waiting for 10s before next check...
+[2025-07-07 21:32:32] INFO: (Check-7) Current status: Running
+[2025-07-07 21:32:32] INFO: =================[Get Running Output, Attempt-7]=================
+[2025-07-07 21:32:32] INFO: Command is still running... (60s elapsed)
+[2025-07-07 21:32:32] INFO: [NEW OUTPUT LINES]: 10
+    22	from /home/azureuser/test2.sh, message 22
+    23	from /home/azureuser/test2.sh, message 23
+    24	from /home/azureuser/test2.sh, message 24
+    25	from /home/azureuser/test2.sh, message 25
+    26	from /home/azureuser/test2.sh, message 26
+    27	from /home/azureuser/test2.sh, message 27
+    28	from /home/azureuser/test2.sh, message 28
+    29	from /home/azureuser/test2.sh, message 29
+    30	from /home/azureuser/test2.sh, message 30
+    31	
+[2025-07-07 21:32:32] INFO: (Check-7) 🕜 Waiting for 10s before next check...
+[2025-07-07 21:32:44] INFO: (Check-8) Current status: Running
+[2025-07-07 21:32:44] INFO: =================[Get Running Output, Attempt-8]=================
+[2025-07-07 21:32:44] INFO: Command is still running... (70s elapsed)
+[2025-07-07 21:32:44] INFO: (Check-8) 🕜 Waiting for 10s before next check...
+[2025-07-07 21:32:55] INFO: (Check-9) Current status: Running
+[2025-07-07 21:32:55] INFO: =================[Get Running Output, Attempt-9]=================
+[2025-07-07 21:32:55] INFO: Command is still running... (80s elapsed)
+[2025-07-07 21:32:55] INFO: (Check-9) 🕜 Waiting for 10s before next check...
+[2025-07-07 21:33:06] INFO: (Check-10) Current status: Running
+[2025-07-07 21:33:06] INFO: =================[Get Running Output, Attempt-10]=================
+[2025-07-07 21:33:06] INFO: Command is still running... (90s elapsed)
+[2025-07-07 21:33:06] INFO: [NEW OUTPUT LINES]: 10
+    32	from /home/azureuser/test2.sh, message 32
+    33	from /home/azureuser/test2.sh, message 33
+    34	from /home/azureuser/test2.sh, message 34
+    35	from /home/azureuser/test2.sh, message 35
+    36	from /home/azureuser/test2.sh, message 36
+    37	from /home/azureuser/test2.sh, message 37
+    38	from /home/azureuser/test2.sh, message 38
+    39	from /home/azureuser/test2.sh, message 39
+    40	from /home/azureuser/test2.sh, message 40
+    41	
+[2025-07-07 21:33:06] INFO: (Check-10) 🕜 Waiting for 10s before next check...
+[2025-07-07 21:33:18] INFO: (Check-11) Current status: Running
+[2025-07-07 21:33:18] INFO: =================[Get Running Output, Attempt-11]=================
+[2025-07-07 21:33:18] INFO: Command is still running... (100s elapsed)
+[2025-07-07 21:33:18] INFO: (Check-11) 🕜 Waiting for 10s before next check...
+[2025-07-07 21:33:29] INFO: (Check-12) Current status: Running
+[2025-07-07 21:33:29] INFO: =================[Get Running Output, Attempt-12]=================
+[2025-07-07 21:33:29] INFO: Command is still running... (110s elapsed)
+[2025-07-07 21:33:29] INFO: (Check-12) 🕜 Waiting for 10s before next check...
+[2025-07-07 21:33:40] INFO: (Check-13) Current status: Running
+[2025-07-07 21:33:40] INFO: =================[Get Running Output, Attempt-13]=================
+[2025-07-07 21:33:40] INFO: Command is still running... (120s elapsed)
+[2025-07-07 21:33:40] INFO: [NEW OUTPUT LINES]: 10
+    42	from /home/azureuser/test2.sh, message 42
+    43	from /home/azureuser/test2.sh, message 43
+    44	from /home/azureuser/test2.sh, message 44
+    45	from /home/azureuser/test2.sh, message 45
+    46	from /home/azureuser/test2.sh, message 46
+    47	from /home/azureuser/test2.sh, message 47
+    48	from /home/azureuser/test2.sh, message 48
+    49	from /home/azureuser/test2.sh, message 49
+    50	from /home/azureuser/test2.sh, message 50
+    51	
+[2025-07-07 21:33:40] INFO: (Check-13) 🕜 Waiting for 10s before next check...
+[2025-07-07 21:33:52] INFO: (Check-14) Current status: Running
+[2025-07-07 21:33:52] INFO: =================[Get Running Output, Attempt-14]=================
+[2025-07-07 21:33:52] INFO: Command is still running... (130s elapsed)
+[2025-07-07 21:33:52] INFO: (Check-14) 🕜 Waiting for 10s before next check...
+[2025-07-07 21:34:03] INFO: (Check-15) Current status: Running
+[2025-07-07 21:34:03] INFO: =================[Get Running Output, Attempt-15]=================
+[2025-07-07 21:34:03] INFO: Command is still running... (140s elapsed)
+[2025-07-07 21:34:03] INFO: [NEW OUTPUT LINES]: 10
+    52	from /home/azureuser/test2.sh, message 52
+    53	from /home/azureuser/test2.sh, message 53
+    54	from /home/azureuser/test2.sh, message 54
+    55	from /home/azureuser/test2.sh, message 55
+    56	from /home/azureuser/test2.sh, message 56
+    57	from /home/azureuser/test2.sh, message 57
+    58	from /home/azureuser/test2.sh, message 58
+    59	from /home/azureuser/test2.sh, message 59
+    60	from /home/azureuser/test2.sh, message 60
+    61	
+[2025-07-07 21:34:03] INFO: (Check-15) 🕜 Waiting for 10s before next check...
+[2025-07-07 21:34:14] INFO: (Check-16) Current status: Running
+[2025-07-07 21:34:14] INFO: =================[Get Running Output, Attempt-16]=================
+[2025-07-07 21:34:14] INFO: Command is still running... (150s elapsed)
+[2025-07-07 21:34:14] INFO: (Check-16) 🕜 Waiting for 10s before next check...
+[2025-07-07 21:34:25] INFO: (Check-17) Current status: Running
+[2025-07-07 21:34:25] INFO: =================[Get Running Output, Attempt-17]=================
+[2025-07-07 21:34:26] INFO: Command is still running... (160s elapsed)
+[2025-07-07 21:34:26] INFO: (Check-17) 🕜 Waiting for 10s before next check...
+[2025-07-07 21:34:37] INFO: (Check-18) Current status: Running
+[2025-07-07 21:34:37] INFO: =================[Get Running Output, Attempt-18]=================
+[2025-07-07 21:34:37] INFO: Command is still running... (170s elapsed)
+[2025-07-07 21:34:37] INFO: [NEW OUTPUT LINES]: 10
+    62	from /home/azureuser/test2.sh, message 62
+    63	from /home/azureuser/test2.sh, message 63
+    64	from /home/azureuser/test2.sh, message 64
+    65	from /home/azureuser/test2.sh, message 65
+    66	from /home/azureuser/test2.sh, message 66
+    67	from /home/azureuser/test2.sh, message 67
+    68	from /home/azureuser/test2.sh, message 68
+    69	from /home/azureuser/test2.sh, message 69
+    70	from /home/azureuser/test2.sh, message 70
+    71	
+[2025-07-07 21:34:37] INFO: (Check-18) 🕜 Waiting for 10s before next check...
+[2025-07-07 21:34:48] INFO: (Check-19) Current status: Running
+[2025-07-07 21:34:48] INFO: =================[Get Running Output, Attempt-19]=================
+[2025-07-07 21:34:48] INFO: Command is still running... (180s elapsed)
+[2025-07-07 21:34:48] INFO: (Check-19) 🕜 Waiting for 10s before next check...
+[2025-07-07 21:34:59] INFO: (Check-20) Current status: Running
+[2025-07-07 21:34:59] INFO: =================[Get Running Output, Attempt-20]=================
+[2025-07-07 21:34:59] INFO: Command is still running... (190s elapsed)
+[2025-07-07 21:34:59] INFO: (Check-20) 🕜 Waiting for 10s before next check...
+[2025-07-07 21:35:11] INFO: (Check-21) Current status: Running
+[2025-07-07 21:35:11] INFO: =================[Get Running Output, Attempt-21]=================
+[2025-07-07 21:35:11] INFO: Command is still running... (200s elapsed)
+[2025-07-07 21:35:11] INFO: [NEW OUTPUT LINES]: 10
+    72	from /home/azureuser/test2.sh, message 72
+    73	from /home/azureuser/test2.sh, message 73
+    74	from /home/azureuser/test2.sh, message 74
+    75	from /home/azureuser/test2.sh, message 75
+    76	from /home/azureuser/test2.sh, message 76
+    77	from /home/azureuser/test2.sh, message 77
+    78	from /home/azureuser/test2.sh, message 78
+    79	from /home/azureuser/test2.sh, message 79
+    80	from /home/azureuser/test2.sh, message 80
+    81	
+[2025-07-07 21:35:11] INFO: (Check-21) 🕜 Waiting for 10s before next check...
+[2025-07-07 21:35:22] INFO: (Check-22) Current status: Running
+[2025-07-07 21:35:22] INFO: =================[Get Running Output, Attempt-22]=================
+[2025-07-07 21:35:22] INFO: Command is still running... (210s elapsed)
+[2025-07-07 21:35:22] INFO: (Check-22) 🕜 Waiting for 10s before next check...
+[2025-07-07 21:35:33] INFO: (Check-23) Current status: Running
+[2025-07-07 21:35:33] INFO: =================[Get Running Output, Attempt-23]=================
+[2025-07-07 21:35:33] INFO: Command is still running... (220s elapsed)
+[2025-07-07 21:35:33] INFO: [NEW OUTPUT LINES]: 10
+    82	from /home/azureuser/test2.sh, message 82
+    83	from /home/azureuser/test2.sh, message 83
+    84	from /home/azureuser/test2.sh, message 84
+    85	from /home/azureuser/test2.sh, message 85
+    86	from /home/azureuser/test2.sh, message 86
+    87	from /home/azureuser/test2.sh, message 87
+    88	from /home/azureuser/test2.sh, message 88
+    89	from /home/azureuser/test2.sh, message 89
+    90	from /home/azureuser/test2.sh, message 90
+    91	
+[2025-07-07 21:35:33] INFO: (Check-23) 🕜 Waiting for 10s before next check...
+[2025-07-07 21:35:44] INFO: (Check-24) Current status: Running
+[2025-07-07 21:35:44] INFO: =================[Get Running Output, Attempt-24]=================
+[2025-07-07 21:35:44] INFO: Command is still running... (230s elapsed)
+[2025-07-07 21:35:44] INFO: (Check-24) 🕜 Waiting for 10s before next check...
+[2025-07-07 21:35:56] INFO: (Check-25) Current status: Running
+[2025-07-07 21:35:56] INFO: =================[Get Running Output, Attempt-25]=================
+[2025-07-07 21:35:56] INFO: Command is still running... (240s elapsed)
+[2025-07-07 21:35:56] INFO: (Check-25) 🕜 Waiting for 10s before next check...
+[2025-07-07 21:36:07] INFO: (Check-26) Current status: Succeeded
+[2025-07-07 21:36:07] SUCCESS: ✅ Command completed successfully
+[2025-07-07 21:36:07] SUCCESS: ✅ Command execution completed!
+[2025-07-07 21:36:07] INFO: Retrieving command results...
+[2025-07-07 21:36:07] SUCCESS: ✅ Command executed successfully
 
 ==================[EXECUTION INFO]===================
 Execution State: Succeeded
 Exit Code: 0
-Start Time: 2025-07-06T04:37:17+00:00
-End Time: 2025-07-06T04:37:47+00:00
-Output Blob: https://sihansatest.blob.core.windows.net/run-command-test/WaitForComplete-stdout-20250706-123650.txt
-Error Blob: https://sihansatest.blob.core.windows.net/run-command-test/WaitForComplete-stderr-20250706-123650.txt
+Start Time: 2025-07-07T13:31:00+00:00
+End Time: 2025-07-07T13:36:00+00:00
+Output Blob: https://sihansatest.blob.core.windows.net/run-command-test/WaitForComplete-stdout-20250707-213048.txt
+Error Blob: https://sihansatest.blob.core.windows.net/run-command-test/WaitForComplete-stderr-20250707-213048.txt
 ===============[END OF EXECUTION INFO]===============
 
 ==================[STDOUT]===================
-1 from test2
-
-2 from test2
-
-3 from test2
-
-4 from test2
-
-5 from test2
-
-6 from test2
-
-7 from test2
-
-8 from test2
-
-9 from test2
-
-10 from test2
-
+reuser/test2.sh, message 3
+from /home/azureuser/test2.sh, message 4
+from /home/azureuser/test2.sh, message 5
+from /home/azureuser/test2.sh, message 6
+from /home/azureuser/test2.sh, message 7
+from /home/azureuser/test2.sh, message 8
+from /home/azureuser/test2.sh, message 9
+from /home/azureuser/test2.sh, message 10
+from /home/azureuser/test2.sh, message 11
+from /home/azureuser/test2.sh, message 12
+from /home/azureuser/test2.sh, message 13
+from /home/azureuser/test2.sh, message 14
+from /home/azureuser/test2.sh, message 15
+from /home/azureuser/test2.sh, message 16
+from /home/azureuser/test2.sh, message 17
+from /home/azureuser/test2.sh, message 18
+from /home/azureuser/test2.sh, message 19
+from /home/azureuser/test2.sh, message 20
+from /home/azureuser/test2.sh, message 21
+from /home/azureuser/test2.sh, message 22
+from /home/azureuser/test2.sh, message 23
+from /home/azureuser/test2.sh, message 24
+from /home/azureuser/test2.sh, message 25
+from /home/azureuser/test2.sh, message 26
+from /home/azureuser/test2.sh, message 27
+from /home/azureuser/test2.sh, message 28
+from /home/azureuser/test2.sh, message 29
+from /home/azureuser/test2.sh, message 30
+from /home/azureuser/test2.sh, message 31
+from /home/azureuser/test2.sh, message 32
+from /home/azureuser/test2.sh, message 33
+from /home/azureuser/test2.sh, message 34
+from /home/azureuser/test2.sh, message 35
+from /home/azureuser/test2.sh, message 36
+from /home/azureuser/test2.sh, message 37
+from /home/azureuser/test2.sh, message 38
+from /home/azureuser/test2.sh, message 39
+from /home/azureuser/test2.sh, message 40
+from /home/azureuser/test2.sh, message 41
+from /home/azureuser/test2.sh, message 42
+from /home/azureuser/test2.sh, message 43
+from /home/azureuser/test2.sh, message 44
+from /home/azureuser/test2.sh, message 45
+from /home/azureuser/test2.sh, message 46
+from /home/azureuser/test2.sh, message 47
+from /home/azureuser/test2.sh, message 48
+from /home/azureuser/test2.sh, message 49
+from /home/azureuser/test2.sh, message 50
+from /home/azureuser/test2.sh, message 51
+from /home/azureuser/test2.sh, message 52
+from /home/azureuser/test2.sh, message 53
+from /home/azureuser/test2.sh, message 54
+from /home/azureuser/test2.sh, message 55
+from /home/azureuser/test2.sh, message 56
+from /home/azureuser/test2.sh, message 57
+from /home/azureuser/test2.sh, message 58
+from /home/azureuser/test2.sh, message 59
+from /home/azureuser/test2.sh, message 60
+from /home/azureuser/test2.sh, message 61
+from /home/azureuser/test2.sh, message 62
+from /home/azureuser/test2.sh, message 63
+from /home/azureuser/test2.sh, message 64
+from /home/azureuser/test2.sh, message 65
+from /home/azureuser/test2.sh, message 66
+from /home/azureuser/test2.sh, message 67
+from /home/azureuser/test2.sh, message 68
+from /home/azureuser/test2.sh, message 69
+from /home/azureuser/test2.sh, message 70
+from /home/azureuser/test2.sh, message 71
+from /home/azureuser/test2.sh, message 72
+from /home/azureuser/test2.sh, message 73
+from /home/azureuser/test2.sh, message 74
+from /home/azureuser/test2.sh, message 75
+from /home/azureuser/test2.sh, message 76
+from /home/azureuser/test2.sh, message 77
+from /home/azureuser/test2.sh, message 78
+from /home/azureuser/test2.sh, message 79
+from /home/azureuser/test2.sh, message 80
+from /home/azureuser/test2.sh, message 81
+from /home/azureuser/test2.sh, message 82
+from /home/azureuser/test2.sh, message 83
+from /home/azureuser/test2.sh, message 84
+from /home/azureuser/test2.sh, message 85
+from /home/azureuser/test2.sh, message 86
+from /home/azureuser/test2.sh, message 87
+from /home/azureuser/test2.sh, message 88
+from /home/azureuser/test2.sh, message 89
+from /home/azureuser/test2.sh, message 90
+from /home/azureuser/test2.sh, message 91
+from /home/azureuser/test2.sh, message 92
+from /home/azureuser/test2.sh, message 93
+from /home/azureuser/test2.sh, message 94
+from /home/azureuser/test2.sh, message 95
+from /home/azureuser/test2.sh, message 96
+from /home/azureuser/test2.sh, message 97
+from /home/azureuser/test2.sh, message 98
+from /home/azureuser/test2.sh, message 99
+from /home/azureuser/test2.sh, message 100
 
 
 ===============[END OF STDOUT]===============
 
 ==================[STDERR]===================
-+ for i in {1..10}
-+ echo '1 from test2'
-+ echo
+me/azureuser/test2.sh, message 50'
 + sleep 3
-+ for i in {1..10}
-+ echo '2 from test2'
-+ echo
++ for i in {1..100}
++ echo 'from /home/azureuser/test2.sh, message 51'
 + sleep 3
-+ for i in {1..10}
-+ echo '3 from test2'
-+ echo
++ for i in {1..100}
++ echo 'from /home/azureuser/test2.sh, message 52'
 + sleep 3
-+ for i in {1..10}
-+ echo '4 from test2'
-+ echo
++ for i in {1..100}
++ echo 'from /home/azureuser/test2.sh, message 53'
 + sleep 3
-+ for i in {1..10}
-+ echo '5 from test2'
-+ echo
++ for i in {1..100}
++ echo 'from /home/azureuser/test2.sh, message 54'
 + sleep 3
-+ for i in {1..10}
-+ echo '6 from test2'
-+ echo
++ for i in {1..100}
++ echo 'from /home/azureuser/test2.sh, message 55'
 + sleep 3
-+ for i in {1..10}
-+ echo '7 from test2'
-+ echo
++ for i in {1..100}
++ echo 'from /home/azureuser/test2.sh, message 56'
 + sleep 3
-+ for i in {1..10}
-+ echo '8 from test2'
-+ echo
++ for i in {1..100}
++ echo 'from /home/azureuser/test2.sh, message 57'
 + sleep 3
-+ for i in {1..10}
-+ echo '9 from test2'
-+ echo
++ for i in {1..100}
++ echo 'from /home/azureuser/test2.sh, message 58'
 + sleep 3
-+ for i in {1..10}
-+ echo '10 from test2'
-+ echo
++ for i in {1..100}
++ echo 'from /home/azureuser/test2.sh, message 59'
++ sleep 3
++ for i in {1..100}
++ echo 'from /home/azureuser/test2.sh, message 60'
++ sleep 3
++ for i in {1..100}
++ echo 'from /home/azureuser/test2.sh, message 61'
++ sleep 3
++ for i in {1..100}
++ echo 'from /home/azureuser/test2.sh, message 62'
++ sleep 3
++ for i in {1..100}
++ echo 'from /home/azureuser/test2.sh, message 63'
++ sleep 3
++ for i in {1..100}
++ echo 'from /home/azureuser/test2.sh, message 64'
++ sleep 3
++ for i in {1..100}
++ echo 'from /home/azureuser/test2.sh, message 65'
++ sleep 3
++ for i in {1..100}
++ echo 'from /home/azureuser/test2.sh, message 66'
++ sleep 3
++ for i in {1..100}
++ echo 'from /home/azureuser/test2.sh, message 67'
++ sleep 3
++ for i in {1..100}
++ echo 'from /home/azureuser/test2.sh, message 68'
++ sleep 3
++ for i in {1..100}
++ echo 'from /home/azureuser/test2.sh, message 69'
++ sleep 3
++ for i in {1..100}
++ echo 'from /home/azureuser/test2.sh, message 70'
++ sleep 3
++ for i in {1..100}
++ echo 'from /home/azureuser/test2.sh, message 71'
++ sleep 3
++ for i in {1..100}
++ echo 'from /home/azureuser/test2.sh, message 72'
++ sleep 3
++ for i in {1..100}
++ echo 'from /home/azureuser/test2.sh, message 73'
++ sleep 3
++ for i in {1..100}
++ echo 'from /home/azureuser/test2.sh, message 74'
++ sleep 3
++ for i in {1..100}
++ echo 'from /home/azureuser/test2.sh, message 75'
++ sleep 3
++ for i in {1..100}
++ echo 'from /home/azureuser/test2.sh, message 76'
++ sleep 3
++ for i in {1..100}
++ echo 'from /home/azureuser/test2.sh, message 77'
++ sleep 3
++ for i in {1..100}
++ echo 'from /home/azureuser/test2.sh, message 78'
++ sleep 3
++ for i in {1..100}
++ echo 'from /home/azureuser/test2.sh, message 79'
++ sleep 3
++ for i in {1..100}
++ echo 'from /home/azureuser/test2.sh, message 80'
++ sleep 3
++ for i in {1..100}
++ echo 'from /home/azureuser/test2.sh, message 81'
++ sleep 3
++ for i in {1..100}
++ echo 'from /home/azureuser/test2.sh, message 82'
++ sleep 3
++ for i in {1..100}
++ echo 'from /home/azureuser/test2.sh, message 83'
++ sleep 3
++ for i in {1..100}
++ echo 'from /home/azureuser/test2.sh, message 84'
++ sleep 3
++ for i in {1..100}
++ echo 'from /home/azureuser/test2.sh, message 85'
++ sleep 3
++ for i in {1..100}
++ echo 'from /home/azureuser/test2.sh, message 86'
++ sleep 3
++ for i in {1..100}
++ echo 'from /home/azureuser/test2.sh, message 87'
++ sleep 3
++ for i in {1..100}
++ echo 'from /home/azureuser/test2.sh, message 88'
++ sleep 3
++ for i in {1..100}
++ echo 'from /home/azureuser/test2.sh, message 89'
++ sleep 3
++ for i in {1..100}
++ echo 'from /home/azureuser/test2.sh, message 90'
++ sleep 3
++ for i in {1..100}
++ echo 'from /home/azureuser/test2.sh, message 91'
++ sleep 3
++ for i in {1..100}
++ echo 'from /home/azureuser/test2.sh, message 92'
++ sleep 3
++ for i in {1..100}
++ echo 'from /home/azureuser/test2.sh, message 93'
++ sleep 3
++ for i in {1..100}
++ echo 'from /home/azureuser/test2.sh, message 94'
++ sleep 3
++ for i in {1..100}
++ echo 'from /home/azureuser/test2.sh, message 95'
++ sleep 3
++ for i in {1..100}
++ echo 'from /home/azureuser/test2.sh, message 96'
++ sleep 3
++ for i in {1..100}
++ echo 'from /home/azureuser/test2.sh, message 97'
++ sleep 3
++ for i in {1..100}
++ echo 'from /home/azureuser/test2.sh, message 98'
++ sleep 3
++ for i in {1..100}
++ echo 'from /home/azureuser/test2.sh, message 99'
++ sleep 3
++ for i in {1..100}
++ echo 'from /home/azureuser/test2.sh, message 100'
 + sleep 3
 
 
 ===============[END OF STDERR]===============
-[2025-07-06 12:37:56] SUCCESS: ✅ VM run command 'WaitForComplete' output retrieved successfully
+[2025-07-07 21:36:07] SUCCESS: ✅ VM run command 'WaitForComplete' output retrieved successfully
 
 

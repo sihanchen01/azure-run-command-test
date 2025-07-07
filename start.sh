@@ -128,20 +128,14 @@ wait_for_completion() {
 
 		if [[ "$status" == "Succeeded" ]]; then
 			log_success "Command completed successfully"
-			[[ -n "$tail_pid" ]] && kill "$tail_pid" 2>/dev/null
 			return 0
 		elif [[ "$status" == "Failed" ]]; then
 			log_error "Command failed"
-			[[ -n "$tail_pid" ]] && kill "$tail_pid" 2>/dev/null
 			return 1
 		elif [[ "$status" == "Running" ]]; then
 			log_info "=================[Get Running Output, Attempt-$attempt]================="
 			log_info "Command is still running... (${elapsed}s elapsed)"
 			update_tail_file
-			if [[ "$attempt" -eq 1 ]]; then
-				tail -f "$RUNNING_OUTPUT" &
-				tail_pid=$!
-			fi
 		fi
 
 		log_info "(Check-$attempt) 🕜 Waiting for ${wait_interval}s before next check..."
@@ -151,7 +145,6 @@ wait_for_completion() {
 	done
 
 	log_error "Command timed out after ${TIMEOUT_SECONDS}s"
-	[[ -n "$tail_pid" ]] && kill "$tail_pid" 2>/dev/null
 	return 1
 
 }
@@ -165,8 +158,9 @@ update_tail_file() {
 	total_lines=$(wc -l <"$TMP_OUTPUT")
 	new_lines=$((total_lines - last_line))
 
+	log_info "[NEW OUTPUT LINES]: $new_lines"
 	if [ "$new_lines" -gt 0 ]; then
-		tail -n "$new_lines" "$TMP_OUTPUT" >>"$RUNNING_OUTPUT"
+		nl -ba "$TMP_OUTPUT"  | tail -n "$new_lines" | tee -a "$RUNNING_OUTPUT"
 		last_line=$total_lines
 	fi
 }

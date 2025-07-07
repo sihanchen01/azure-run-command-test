@@ -1,7 +1,102 @@
 ================ [Test: Verbose Mode] ================
-[2025-07-07 15:11:39] INFO: ⭐ Starting Run Command Creation Pipeline...
-[2025-07-07 15:11:39] INFO: Checking Azure CLI authentication...
-[2025-07-07 15:11:39] INFO: Using subscription: 916285b1-819c-47fb-b998-ea610835d45f
-[2025-07-07 15:11:39] INFO: Validating VM exists...
-[2025-07-07 15:11:40] INFO: Validating storage account exists...
-[2025-07-07 15:11:43] INFO: Validating container exists...
+[2025-07-07 21:11:13] INFO: ⭐ Starting Run Command Creation Pipeline...
+[2025-07-07 21:11:13] INFO: Checking Azure CLI authentication...
+[2025-07-07 21:11:14] INFO: Using subscription: 916285b1-819c-47fb-b998-ea610835d45f
+[2025-07-07 21:11:14] INFO: Validating VM exists...
+[2025-07-07 21:11:15] INFO: Validating storage account exists...
+[2025-07-07 21:11:16] INFO: Validating container exists...
+[2025-07-07 21:11:18] INFO: Retrieving storage account key...
+[2025-07-07 21:11:19] INFO: Generated SAS token expiry: 2025-07-07T14:11Z
+[2025-07-07 21:11:19] INFO: Generating SAS token for output file...
+[2025-07-07 21:11:20] INFO: Generating SAS token for error file...
+[2025-07-07 21:11:21] INFO: Creating VM run command...
++ log_debug 'DEBUG ON'
++ [[ true == \t\r\u\e ]]
+++ date '+%Y-%m-%d %H:%M:%S'
++ echo '[2025-07-07 21:11:21] DEBUG: DEBUG ON'
+[2025-07-07 21:11:21] DEBUG: DEBUG ON
++ log_warning 'Please note that sensitive information such as SAS token may be logged!'
+++ date '+%Y-%m-%d %H:%M:%S'
++ echo '[2025-07-07 21:11:21] WARNING: ⚠️ Please note that sensitive information such as SAS token may be logged!'
+[2025-07-07 21:11:21] WARNING: ⚠️ Please note that sensitive information such as SAS token may be logged!
+++ az vm run-command create --run-command-name VerboseTest --async-execution true --resource-group testvm_group --vm-name testvm --script 'bash /home/azureuser/test.sh | tee /home/azureuser/log/VerboseTest-20250707-211118.log' --output-blob-uri 'https://sihansatest.blob.core.windows.net/run-command-test/VerboseTest-stdout-20250707-211118.txt?se=2025-07-07T14%3A11Z&sp=rw&spr=https&sv=2022-11-02&sr=b&sig=AGnFqSV1G9njcJdAQhzUNYsCfFVuAXqMoiTyCc8TX1U%3D' --error-blob-uri 'https://sihansatest.blob.core.windows.net/run-command-test/VerboseTest-stderr-20250707-211118.txt?se=2025-07-07T14%3A11Z&sp=rw&spr=https&sv=2022-11-02&sr=b&sig=H0LWnE644QHm%2FZ%2BdFeYoxWGnu%2FN74tbB4%2BIE8MWXxoA%3D' --timeout-in-seconds 3600 --run-as-user azureuser
++ create_run_command='{
+  "asyncExecution": true,
+  "errorBlobManagedIdentity": null,
+  "errorBlobUri": "https://sihansatest.blob.core.windows.net/run-command-test/VerboseTest-stderr-20250707-211118.txt",
+  "id": "/subscriptions/916285b1-819c-47fb-b998-ea610835d45f/resourceGroups/testvm_group/providers/Microsoft.Compute/virtualMachines/testvm/runCommands/VerboseTest",
+  "instanceView": null,
+  "location": "southeastasia",
+  "name": "VerboseTest",
+  "outputBlobManagedIdentity": null,
+  "outputBlobUri": "https://sihansatest.blob.core.windows.net/run-command-test/VerboseTest-stdout-20250707-211118.txt",
+  "parameters": null,
+  "protectedParameters": null,
+  "provisioningState": "Succeeded",
+  "resourceGroup": "testvm_group",
+  "runAsPassword": null,
+  "runAsUser": "azureuser",
+  "source": {
+    "commandId": null,
+    "script": "bash /home/azureuser/test.sh | tee /home/azureuser/log/VerboseTest-20250707-211118.log",
+    "scriptUri": null,
+    "scriptUriManagedIdentity": null
+  },
+  "tags": null,
+  "timeoutInSeconds": 3600,
+  "treatFailureAsDeploymentFailure": null,
+  "type": "Microsoft.Compute/virtualMachines/runCommands"
+}'
++ [[ true == \t\r\u\e ]]
++ log_debug 'DEBUG OFF'
++ [[ true == \t\r\u\e ]]
+++ date '+%Y-%m-%d %H:%M:%S'
++ echo '[2025-07-07 21:11:53] DEBUG: DEBUG OFF'
+[2025-07-07 21:11:53] DEBUG: DEBUG OFF
++ set +x
+[2025-07-07 21:11:53] SUCCESS: ✅ VM run command 'VerboseTest' created successfully
+[2025-07-07 21:11:53] INFO: Waiting for command completion (timeout: 3600s)...
+[2025-07-07 21:11:54] INFO: (Check-1) Current status: Succeeded
+[2025-07-07 21:11:54] SUCCESS: ✅ Command completed successfully
+[2025-07-07 21:11:54] SUCCESS: ✅ Command execution completed!
+[2025-07-07 21:11:54] INFO: Retrieving command results...
+[2025-07-07 21:11:54] SUCCESS: ✅ Command executed successfully
+
+==================[EXECUTION INFO]===================
+Execution State: Succeeded
+Exit Code: 0
+Start Time: 2025-07-07T13:11:28+00:00
+End Time: 2025-07-07T13:11:28+00:00
+Output Blob: https://sihansatest.blob.core.windows.net/run-command-test/VerboseTest-stdout-20250707-211118.txt
+Error Blob: https://sihansatest.blob.core.windows.net/run-command-test/VerboseTest-stderr-20250707-211118.txt
+===============[END OF EXECUTION INFO]===============
+
+==================[STDOUT]===================
+testvm
+NAME              MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sda                 8:0    0   64G  0 disk 
+├─sda1              8:1    0  500M  0 part /boot/efi
+├─sda2              8:2    0    1G  0 part /boot
+├─sda3              8:3    0    2M  0 part 
+└─sda4              8:4    0 62.5G  0 part 
+  ├─rootvg-homelv 253:0    0    1G  0 lvm  /home
+  ├─rootvg-rootlv 253:1    0    2G  0 lvm  /
+  ├─rootvg-tmplv  253:2    0    2G  0 lvm  /tmp
+  ├─rootvg-usrlv  253:3    0   10G  0 lvm  /usr
+  └─rootvg-varlv  253:4    0   10G  0 lvm  /var
+sdb                 8:16   0    4G  0 disk 
+└─sdb1              8:17   0    4G  0 part /mnt
+sr0                11:0    1  628K  0 rom  
+
+
+===============[END OF STDOUT]===============
+
+==================[STDERR]===================
++ hostname
++ lsblk
+
+
+===============[END OF STDERR]===============
+[2025-07-07 21:11:55] SUCCESS: ✅ VM run command 'VerboseTest' output retrieved successfully
+
+

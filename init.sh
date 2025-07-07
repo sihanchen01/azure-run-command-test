@@ -50,6 +50,28 @@ test_missing_required_args() {
     echo
 }
 
+test_invalid_log_foler() {
+    echo "================ [Test: Invalid Log Folder] ================"
+    # test.sh will run for 100 seconds
+    ./start.sh \
+        --vm-resource-group "testvm_group" \
+        --vm-name "testvm" \
+        --run-command-name "InvalidLogFolder" \
+        --log-folder "/home/azureuser/doesnotexist" \
+        --script-name "/home/azureuser/test.sh" \
+        --storage-account-resource-group "mytestvm_group" \
+        --storage-account "sihansatest" \
+        --container "run-command-test" \
+        --run-as-user "azureuser" \
+        --timeout 1800 \
+        --sas-expiry 30 \
+        --no-wait
+    echo
+    echo
+}
+
+
+
 test_no_wait() {
     echo "================ [Test: No Wait Mode] ================"
     # test.sh will run for 100 seconds
@@ -58,7 +80,7 @@ test_no_wait() {
         --vm-name "testvm" \
         --run-command-name "NoWaitTest" \
         --log-folder "/home/azureuser/log" \
-        --script-name "/home/azureuser/test.sh" \
+        --script-name "/home/azureuser/test2.sh" \
         --storage-account-resource-group "mytestvm_group" \
         --storage-account "sihansatest" \
         --container "run-command-test" \
@@ -80,7 +102,7 @@ test_verbose() {
         --vm-name "testvm" \
         --run-command-name "VerboseTest" \
         --log-folder "/home/azureuser/log" \
-        --script-name "/home/azureuser/test3.sh" \
+        --script-name "/home/azureuser/test.sh" \
         --storage-account-resource-group "mytestvm_group" \
         --storage-account "sihansatest" \
         --container "run-command-test" \
@@ -113,14 +135,16 @@ test_wait_for_completion() {
 
 echo "Running tests..."
 
-test_invalid_sas 2>&1 | tee testlog/01-test_invalid_sas.log
-
-test_invalid_storage_account 2>&1 | tee testlog/02-test_invalid_storage_account.log 
-
-test_missing_required_args 2>&1 | tee testlog/03-test_missing_required_args.log
-
-test_no_wait 2>&1 | tee testlog/04-test_no_wait.log
-
-test_verbose 2>&1 | tee testlog/05-test_verbose.log
+# test_invalid_sas 2>&1 | tee testlog/01-test_invalid_sas.log
+# 
+# test_invalid_storage_account 2>&1 | tee testlog/02-test_invalid_storage_account.log 
+# 
+# test_missing_required_args 2>&1 | tee testlog/03-test_missing_required_args.log
+# 
+# test_invalid_log_foler 2>&1 | tee testlog/04-test_invalid_log_folder.log
+# 
+# test_no_wait 2>&1 | tee testlog/04-test_no_wait.log
+# 
+# test_verbose 2>&1 | tee testlog/05-test_verbose.log
 
 test_wait_for_completion 2>&1 | tee testlog/06-test_wait_for_completion.log
