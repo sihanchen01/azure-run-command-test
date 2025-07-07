@@ -1,0 +1,16 @@
+================ [Test: Basic Run Command] ================
+[2025-07-07 15:16:50] INFO: ⭐ Starting Run Command Creation Pipeline...
+[2025-07-07 15:16:50] INFO: Checking Azure CLI authentication...
+[2025-07-07 15:16:53] INFO: Using subscription: 916285b1-819c-47fb-b998-ea610835d45f
+[2025-07-07 15:16:53] INFO: Validating VM exists...
+[2025-07-07 15:16:54] INFO: Creating VM run command...
++ log_debug 'DEBUG ON'
++ [[ true == \t\r\u\e ]]
+++ date '+%Y-%m-%d %H:%M:%S'
++ echo '[2025-07-07 15:16:54] DEBUG: DEBUG ON'
+[2025-07-07 15:16:54] DEBUG: DEBUG ON
++ log_warning 'Please note that sensitive information such as SAS token may be logged!'
+++ date '+%Y-%m-%d %H:%M:%S'
++ echo '[2025-07-07 15:16:54] WARNING: ⚠️ Please note that sensitive information such as SAS token may be logged!'
+[2025-07-07 15:16:54] WARNING: ⚠️ Please note that sensitive information such as SAS token may be logged!
+++ az vm run-command create --run-command-name BasicWorkTest --async-execution true --resource-group testvm_group --vm-name testvm --script 'bash /home/azureuser/test3.sh | tee /home/azureuser/log/BasicWorkTest-20250707-151654.log' --timeout-in-seconds 1800 --run-as-user azureuser
